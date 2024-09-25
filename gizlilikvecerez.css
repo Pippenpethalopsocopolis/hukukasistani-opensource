@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'Computer says no';
+    src: url('assets/fonts/computer-says-no.woff') format('woff');
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Computer says no';
+}
+
+body {
+    background: #f4f4f4;
+    background-attachment: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+    color: #000;
+}
+
+.headerdes{
+    display: flex;
+    height: 5vh;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: rgb(75, 27, 202);
+    box-shadow: 0px 4px 2px rgba(75, 27, 202);
+    position: fixed;
+    z-index: 8000;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.headerdes a{
+    text-decoration: none;
+    color: #f4f4f4;
+    padding: 0.9rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+  
+.headerdes a:hover{
+    background-color: rgb(84, 30, 231);
+}
+
+#logobeyazdairesel{
+    height: 30px;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+#line{
+    border-right: rgb(172, 172, 172) 1px solid;
+    margin-top: 4px;
+    margin-right: 10px;
+}
+
+#line:hover{
+    background-color: rgb(75, 27, 202);
+}
+
+#politikalarMainContainer {
+    font-family: 'Afacad', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start; /* Add this line */
+    margin: 20px;
+    margin-top: 8%;
+}
+
+@media screen and (max-width: 426px) {
+    #politikalarMainContainer{
+        margin-top: 280%;
+    }
+
+    #mainpage{
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #login{
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    #politikalarMainContainer{
+        margin-top: 380%;
+    }
+
+    #mainpage{
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #login{
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    #politikalarMainContainer{
+        margin-top: 580%;
+    }
+
+    .headerdes a{
+        padding: 0.4rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    #profile{
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #pricing{
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

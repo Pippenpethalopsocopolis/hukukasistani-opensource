@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Computer says no';
+    src: url('assets/fonts/computer-says-no.woff') format('woff');
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Computer says no';
+}
+
+body {
+    background: #f4f4f4;
+    background-attachment: fixed;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: row;
+}
+
+* {
+    box-sizing: border-box;
+    color: #f4f4f4;
+}
+
+.headerdes{
+    display: flex;
+    height: 5vh;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: rgb(75, 27, 202);
+    box-shadow: 0px 4px 2px rgba(75, 27, 202);
+    position: fixed;
+    z-index: 8000;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.headerdes a{
+    text-decoration: none;
+    color: #f4f4f4;
+    padding: 0.9rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+  
+.headerdes a:hover{
+    background-color: rgb(84, 30, 231);
+}
+
+#logobeyazdairesel{
+    height: 30px;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+#line{
+    border-right: rgb(172, 172, 172) 1px solid;
+    margin-top: 4px;
+    margin-right: 10px;
+}
+
+#line:hover{
+    background-color: rgb(75, 27, 202);
+}
+
+#mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 9px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.half{
+    flex: 1;
+    margin: 10%;
+    margin-top: 12%;
+}
+
+#sozlesmeveForm{
+    font-family: 'Afacad', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 9px;
+    padding: 20px;
+    color: #000;
+    max-height: 660px;
+    overflow-y: auto;
+}
+
+#sozlesmeveForm h2, p{
+    color: #000;
+}
+
+#sozlesmeveForm div, h2, p b{
+    color: #000;
+}
+
+#mesafeliSatisSozlesmesi h2, p{
+    color: #000;
+    font-family: 'Afacad', sans-serif;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input{
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Afacad', sans-serif;
+    border-radius: 4px;
+    color: black;
+    width: 93%;
+}
+
+input:hover{
+    border: #4CAF50 solid 2px;
+}
+
+input:focus{
+    outline-color: #4CAF50;
+}
+
+input:valid{
+    border: #4CAF50 solid 2px;
+}
+
+#nameandSurname{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#forwardtoPaymentForm{
+    display: none;
+    font-family: 'Afacad', sans-serif;
+}
+
+#sozlesmeveFormWarning{
+    color: red;
+    display: none;
+}
+
+label{
+    color: #000;
+    cursor:pointer;
+}
+
+#sozlesmeveFormOnay{
+    margin-right: 0;
+    width: auto;
+}
+
+#checkboxContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+#download{
+    width: 50%;
+}
+
+button{
+    border: none;
+    color: white;
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #45a049;
+}
+
+#paymentText{
+    color: black;
+    font-size: large;
+    margin: 0;
+    font-family: 'Afacad', sans-serif;
+}
+
+hr{
+    border-bottom: 1px solid rgb(244, 244, 244);
+    width: 100%;
+}
+
+#warning{
+    color: red;
+    font-family: 'Afacad', sans-serif;
+    margin-top: 0;
+}
+
+#unknownError{
+    color: red;
+    font-family: 'Afacad', sans-serif;
+    margin-top: 0;
+}
+
+b{
+    color: red;
+}
+
+@media screen and (max-width: 376px) {
+    #mainpage{
+        font-size: 100%;
+    }
+
+    #login{
+        font-size: 100%;
+    }
+
+    #pricing{
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #mainContainer{
+        min-width: 45%;
+        margin: 10px;
+    }
+
+    #sozlesmeveForm{
+        min-width: 50%;
+        margin: 10px;
+    }
+}

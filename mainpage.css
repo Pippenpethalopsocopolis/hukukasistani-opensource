@@ -1,0 +1,640 @@
+@font-face {
+    font-family: 'Computer says no';
+    src: url('assets/fonts/computer-says-no.woff') format('woff');
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    font-family: 'Computer says no';
+    display: flex;
+    flex-direction: column;
+}
+
+#divforbackgroundimage{
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.headerdes{
+    display: flex;
+    height: 5vh;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: rgb(75, 27, 202);
+    box-shadow: 0px 4px 2px rgba(75, 27, 202);
+    position: fixed;
+    z-index: 8000;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.headerdes a{
+    text-decoration: none;
+    color: #f4f4f4;
+    padding: 0.9rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.headerdes a:hover{
+    background: rgb(84, 30, 231);
+}
+
+#maincontainer{
+    position: relative;
+    top: 20vh;
+    left: 25%;
+}
+
+#baslik{
+    font-size: 90px;
+    text-shadow: 0 0 15px rgba(75, 27, 202, 1);
+    font-weight: lighter;
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s, cursor .4s step-end infinite alternate;
+}
+
+#logobeyazdairesel{
+    height: 30px;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+#line{
+    border-right: rgb(172, 172, 172) 1px solid;
+    margin-top: 4px;
+    margin-right: 10px;
+}
+
+#line:hover{
+    background-color: rgb(75, 27, 202);
+}
+
+#aciklama{
+    font-size: 40px;
+    text-shadow: 0 0 15px rgba(75, 27, 202, .7);
+}
+
+#scrollButton{
+    background: #4CAF50;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Afacad', sans-serif;
+    width: 20%;
+}
+
+#scrollButton:hover{
+    background: #45a049;
+}
+
+#cookieBanner{
+    position: fixed;
+    left: 8px;
+    bottom: 8px;
+    width: 350px;
+    background: #000;
+    z-index: 9999;
+    border-radius: 9px 8px 8px 8px;
+    padding: 12px 24px 12px 24px;
+    font-size: 16px;
+    box-shadow: 0 0 8px -5px #000;
+    color: #f4f4f4 !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#cookieBanner button{
+    padding: 8px 16px;
+    cursor: pointer;
+    text-align: center;
+    flex: 1 1 auto;
+    font-size: .75em;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid #f4f4f4;
+    background: transparent;
+    color: #f4f4f4;
+}
+
+#mainText{
+    margin-left: 6%;
+    font-size: large;
+}
+
+/* Cookie part */
+#cookieOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cookieDetailedSettings{
+    background-color: #000;
+    width: 40%;
+    height: 70%;
+    border-radius: 9px;
+    color: #f4f4f4;
+    font-family: 'Afacad', sans-serif;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+#yourSettingsButton{
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+#aydinlatmaMetniButton{
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+#textContainer{
+    margin: 20px;
+}
+
+#textContainerTwo{
+    margin: 20px;
+    margin-top: 25px;
+}
+
+#cookieLine{
+    height: 0.1px;
+    width: 90%;
+    background-color:aliceblue;
+    margin-top: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#aydinlatmaText{
+    margin: 20px;
+}
+
+#aydinlatmaSpan{
+    font-weight: bold;
+}
+
+#ekText{
+    margin: 20px;
+}
+
+#ekText2{
+    margin: 20px;
+}
+
+#saveCookies{
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    font-size: medium;
+    display: block;
+    margin-top: 20%;
+    margin-left: 25%;
+}
+
+#cookieBannerOpener{
+    background-color: #000;
+    color: #f4f4f4;
+    font-size: medium;
+    display: none;
+
+    cursor: pointer;
+    border: none;
+    position: fixed;
+    left: 8px;
+    bottom: 8px;
+    z-index: 9999;
+    border-radius: 9px 8px 8px 8px;
+    padding: 12px 24px 12px 24px;
+    box-shadow: 0 0 8px -5px #000;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: 'Computer says no';
+}
+
+#cookieBannerOpener:hover{
+    background-color: #1c1c1c;
+}
+
+/* The switch*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-left: 20px;
+}
+
+/* Hide the default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* Rounded sliders */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* When checked, change background color of slider */
+input:checked + .slider {
+    background-color: rgb(75, 27, 202);
+}
+
+/* When checked, translate slider to right */
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+#fonksiyonelCerezler{
+    font-weight: bold;
+}
+
+/* Cookie part */
+
+/* Burdan sonrası sayfanın ikinci kısmına gidiyor. */
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+
+    background-image: url(images/backgroundforsection2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Computer says no';
+}
+
+video {
+    height: 50%;
+    margin-left: 5%;
+}
+
+#descriptionContainer{
+    margin-left: 10%;
+    margin-right: 1%;
+    font-size: xx-large;
+}
+
+#descriptionThree{
+    margin-top: 90px;
+}
+
+#descriptionFour{
+    text-shadow: 0 0 15px rgba(75, 27, 202, .7);
+    font-size: 43px;
+}
+
+#free{
+    text-decoration: underline;
+}
+
+#sectionTwoButton{
+    background: #4CAF50;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Afacad', sans-serif;
+    width: 100%;
+}
+
+#sectionTwoButton:hover{
+    background: #45a049;
+}
+/* Burdan sonrası sayfanın ikinci kısmına gidiyor. */
+
+/* Yazı animasyonları */
+@keyframes cursor{
+    0% {border-color: transparent}
+}
+
+@keyframes typing {
+    from {width: 0}
+}
+/* Yazı animasyonları */
+
+/* Responsive hale getirildi. */
+@media screen and (max-width: 426px) {
+    body{
+        flex-direction: column;
+    }
+
+    #maincontainer{
+        left: 3%;
+    }
+
+    #baslik{
+        font-size: 3rem;
+        margin-left: 6%;
+        margin-top: 15%;
+    }
+
+    #aciklama{
+        font-size: 2rem;
+        margin-left: 6%;
+    }
+
+    #divforbackgroundimage{
+        background-image: url(images/backgroundforbigphone2.png);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #scrollButton{
+        width: 95%;
+        font-size: medium;
+    }
+
+    .headerdes{
+        width: 100vw;
+    }
+
+    .section {
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    
+        background-image: none;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'Computer says no';
+    }
+
+    video {
+        height: 27%;
+        margin-left: 5%;
+    }
+
+    #descriptionContainer{
+        margin-left: 0;
+    }
+
+    #sectionTwoButton{
+        width: 90%;
+        margin-left: 1%;
+    }
+
+    #pricing{
+        font-size: 20px;
+    }
+
+    #mainpage{
+        font-size: 15px;
+    }
+
+    #profile{
+        font-size: 20px;
+    }
+
+    #login{
+        font-size: 15px;
+    }
+
+    #register{
+        font-size: 20px;
+    }
+
+    #cookieDetailedSettings{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    body{
+        flex-direction: column;
+    }
+
+    #maincontainer{
+        left: 0;
+    }
+
+    #baslik{
+        font-size: 3rem;
+        margin-left: 6%;
+        margin-top: 15%;
+    }
+
+    #aciklama{
+        font-size: 2rem;
+        margin-left: 6%;
+    }
+
+    #divforbackgroundimage{
+        background-image: url(images/backgroundforbigphone3.png);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #scrollButton{
+        width: 92%;
+        font-size: medium;
+        margin-left: 2%;
+    }
+
+    .headerdes{
+        width: 100vw;
+    }
+
+    .section {
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    
+        background-image: none;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'Computer says no';
+    }
+
+    video {
+        height: 23%;
+    }
+
+    #descriptionContainer{
+        margin-left: 0;
+    }
+
+    #sectionTwoButton{
+        width: 90%;
+        margin-left: 1%;
+    }
+
+    #pricing{
+        font-size: 15px;
+    }
+
+    #mainpage{
+        font-size: 15px;
+    }
+
+    #profile{
+        font-size: 15px;
+    }
+
+    #login{
+        font-size: 15px;
+    }
+
+    #register{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    body{
+        flex-direction: column;
+    }
+
+    #maincontainer{
+        left: 0;
+        margin-left: 0;
+    }
+
+    #baslik{
+        font-size: 2.5rem;
+        margin-left: 5%;
+        margin-top: 15%;
+    }
+
+    #aciklama{
+        font-size: 2rem;
+        margin-left: 5%;
+    }
+
+    #divforbackgroundimage{
+        background-image: url(images/backgroundforbigphone4.png);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #scrollButton{
+        width: 90%;
+        font-size: medium;
+        margin-left: 2%;
+    }
+
+    .headerdes{
+        width: 100vw;
+    }
+
+    .section {
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    
+        background-image: none;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'Computer says no';
+    }
+
+    video {
+        height: 19%;
+    }
+
+    #descriptionContainer{
+        margin-left: 0;
+        font-size: 1.7rem;
+    }
+
+    #sectionTwoButton{
+        width: 80%;
+        font-size: small;
+    }
+
+    #pricing{
+        font-size: 10px;
+    }
+
+    #mainpage{
+        font-size: 10px;
+    }
+
+    #profile{
+        font-size: 10px;
+    }
+
+    #login{
+        font-size: 10px;
+    }
+
+    #register{
+        font-size: 10px;
+    }
+
+    #cookieDetailedSettings{
+        width: 100%;
+    }
+}
+/* Responsive hale getirildi. */

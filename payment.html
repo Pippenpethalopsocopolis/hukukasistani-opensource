@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödeme</title>
+    <link rel="stylesheet" href="payment.css">
+
+    <script src="apijs/paymentsend.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="headerdes">
+
+        <img src="assets/logos/logobeyazdairesel.png" id="logobeyazdairesel">
+
+        <a id="line"></a>
+
+        <a id="mainpage" href="https://hukukasistani.com">Ana Sayfa</a>
+
+        <a id="profile" href="https://hukukasistani.com/profile">Profil</a>
+
+        <a id="pricing" href="https://hukukasistani.com/pricing">Fiyatlandırma</a>
+
+        <a id="about" href="https://hukukasistani.com/hakkinda">Hakkında</a>
+
+    </header>
+
+    <div id="sozlesmeveForm" class="half">
+        
+        <div id="onBilgilendirme">
+
+            <h2>Ön Bilgilendirme Formu</h1>
+            <p>
+                <b>1. KONU</b><br><br>
+                ÖnBilgi Formu’ nun konusu, SATICI’ nın, ALICI’ ya satışını yaptığı, aşağıda
+                nitelikleri ve satış fiyatı belirtilen dijital ürün/ürünlerin satışı ve kullanılması ile ilgili
+                olarak Türk Ticaret Kanunu(TTK), Borçlar Kanunu ve 6502 sayılı Tüketicilerin
+                Korunması Hakkındaki Kanunu ve Mesafeli Sözleşmeler Yönetmeliği hükümleri
+                gereğince tarafların hak ve yükümlülüklerini kapsamaktadır. Ön Bilgilendirme
+                Formu’ nda belirtilen bilgiler, Mesafeli Satış Sözleşmesi’ nin ayrılmaz bir parçasıdır.
+                ALICI, SATICI’ nın unvan, açık adres, telefon ve diğer erişim bilgileri, satışa konu
+                Dijital Ürünün temel nitelikleri, satış fiyatı, ödeme yöntemleri satışa konu Dijital
+                Ürün ile ilgili tüm ön bilgiler ve Dijital Ürün ile ilgili şikayet ve itirazlarını
+                iletebileceği resmi makamlar hakkında açık, anlaşılır ve internet ortamına uygun
+                şekilde SATICI tarafından bilgilendirildiğini; bu ön bilgileri elektronik ortamda teyit
+                ettiğini, Dijital Ürünü satın alma işleminin gerçekleşmesinin akabinde-Mesafeli
+                Sözleşmeler Yönetmeliği’nin m.15/ğ bendi uyarınca– cayma hakkının
+                bulunmadığını bu sözleşme hükümlerince teyit, kabul ve beyan eder. Hukuk
+                Asistanı uygulaması, yapay zeka tarafından verilen cevapların kesin doğruluğunu
+                garanti etmez ve cevaplarda yanlışlıklar olabileceğini bildirir.
+            </p>
+
+            <p>
+                <b>2. TARAFLAR</b>
+            </p>
+
+            <p>SATICI UNVANI: Berk Öcal ("SATICI")</p>
+
+            <p>MERSİS Numarası:</p>
+
+            <p>Adres:</p>
+
+            <p>Telefon: 05366572109</p>
+
+            <p>E-Posta: destek.hukukasistani@gmail.com</p>
+
+            <p>WebAdresi : www.hukukasistani.com</p>
+
+            <p id="aliciAdSoyad">ALICI Adı Soyadı:</p>
+
+            <p id="aliciAdres">Adres:</p>
+
+            <p id="aliciTelefon">Telefon:</p>
+
+            <p id="aliciEposta">E-Posta:</p>
+
+            <p><b>3. SÖZLEŞME KONUSU ÜRÜN VE BEDELİ</b></p>
+
+            <p>
+                3.1. Bu Ön Bilgilendirme Formu’ nun konusu kayıtlı dijital içerik “Berk Öcal” SATICI
+                tarafından sunulan dijital paketlerinden bir tanesidir.<br>
+                3.2. Hizmet paketine ilişkin bilgiler aşağıda yer almaktadır. Paket fiyatına tüm
+                vergiler dahildir. Paket, Bilsem Zeka tarafından özgün ve yaratıcı konseptlerle
+                hazırlanmış dijital içerikten müteşekkildir.
+            </p>
+
+            <p id="urunAdi">Ürün Adı:</p>
+
+            <p id="urunIcerigi">Ürün İçeriği:</p>
+
+            <p id="toplamTutar">Toplam Tuar:</p>
+
+            <p>
+                3.3. ÜRÜN görsel tekniklerle hazırlanan, yalnızca internet üzerinden erişilebilen
+                dijital ürünü içerir. ÜRÜN içerisinde yer alan dijital içerikler kayıtlı olup, ÜRÜN’ e
+                erişimin gerçekleşmesiyle hizmet ifası yerine getirilmiş olacaktır.
+                3.4. ÜRÜN içeriğinde yer alan söz konusu dijital içerikler; hukuku ilgilendiren her
+                konuda yardımcı bilgiler veren ve dilekçe yazabilen yapay zekayı içerir.
+                3.5. Satın almaya konu ÜRÜN elektronik cihazlara kurulum ile aktif hale gelir ve
+                online olarak işlerlik kazanır. Bu bakımdan ALICI’ nın, ÜRÜN’ ün kurulacağı
+                elektronik cihazlarda internet ağı bulunmasının gerekli olduğunu bildiği kabul
+                edilir.
+                3.6. ÜRÜN ile ilgili daha detaylı bilgi, www.hukukasistani.com adresindedir. Ayrıca,
+                Ürün’e ilişkin detaylı kullanım şartlarına Mesafeli Satış Sözleşmesi’nden ulaşılabilir.
+            </p>
+
+            <p><b>4. ÜRÜNÜN KULLANIM SÜRESİ</b></p>
+
+            <p>
+                Abonelik paketlerinde ödemeler, alıcının seçtiği pakete göre yenilenir veya son
+                bulur. Mevcut paketler bir aylık tekrarlanan paket, bir aylık paket, altı aylık paket ve
+                bir yıllık paketlerden oluşur.
+                Paketlerde abonelik sistemi kullanılır ve alınan paketin süresi boyunca ALICI’nın
+                erişimi devam eder.
+                Belirtilen sürelerin sona ermesiyle dijital üründe ana içeriğe erişim kapatılır. Kısıtlı
+                kullanım üzerinden, kişinin bedava kullanım hakkı dolana kadar devam eder ve
+                sonra son bulur. Bedava kullanım hakkı, yapay zeka ile bir seferlik konuşma
+                hakkıdır.
+            </p>
+
+            <p><b>5. ÖDEME YÖNTEMLERİ</b></p>
+
+            <p>
+                Ödeme,aşağıda belirtilen yöntemlerden biri ile yapılır:<br>
+                Kredi Kartı ve Banka Kartı ile Ödeme: www.hukukasistani.com/pricing web
+                sayfasında satın alınmak istenen ürün’ ün ödeme bilgileri aşamasında yer alan
+                yönergelerin izlenerek kredi kartı kullanmak sureti ile belirli bankalarla anlaşmalı
+                olarak, taksit seçeneği olmadan yapılan ödeme yöntemidir. Bu ödeme
+                yönetiminin seçilmesi halinde, ürün bedeli, yetkili elektronik ödeme sağlayıcı
+                kuruluş tarafından tahsil edilmektedir.
+            </p>
+
+            <p><b>6. CAYMA HAKKININ BULUNMAMASI</b></p>
+
+            <p>
+                İşbu Sözleşme konusu ÜRÜN, online ve kayıtlı dijital içeriktir. Bu bakımdan, 6502
+                sayılı Tüketicinin Korunması Hakkında Kanun’ a dayanarak hazırlanan Mesafeli
+                Sözleşmeler Yönetmeliği’nin 15/ğ Maddesi uyarınca “elektronik ortamda anında ifa
+                edilen hizmetler veya tüketiciye anında teslim edilen gayrimaddi mallara ilişkin
+                sözleşmeler” kapsamında kalması sebebiyle ALICI’ nın cayma hakkı
+                bulunmamaktadır.
+            </p>
+
+            <p><b>7. İADE / İPTAL SÜRECİ NASIL İŞLER</b></p>
+
+            <p>
+                İşbu Sözleşme konusu ÜRÜN(Hukuk Asistanı), online ve kayıtlı dijital içeriktir. Bu
+                bakımdan, 6502 sayılı Tüketicinin Korunması Hakkında Kanun’ a dayanarak
+                hazırlanan Mesafeli Sözleşmeler Yönetmeliği’nin 15/ğ Maddesi uyarınca “elektronik
+                ortamda anında ifa edilen hizmetler veya tüketiciye anında teslim edilen
+                gayrimaddi mallara ilişkin sözleşmeler” kapsamında kalması sebebiyle ALICI’ nın
+                caymahakkı bulunmamaktadır.
+                Kullanıcı, tekrarlayan bir aylık abonelik paketimizden satın aldıysa, tekrarlayan
+                aboneliği dilediği zaman iptal edebilir. İptal edilen tekrarlanan abonelikte, bir
+                sonraki ayın ödemesi alınmaz ancak ödediği ayın ücretini de iade alamaz.
+                Tekrarlayan abonelik paketimiz dışındaki paketlerde iptal ve iade hakkı
+                bulunmamaktadır.
+            </p>
+
+            <p><b>8. ÜRÜNÜN KULLANILMASI VE SATICININ BORCUNU İFASI</b></p>
+
+            <p>
+                8.1. SATICI, ALICI’ yı ÜRÜN hakkında işbu Ön Bilgilendirme Formu’ nu okumakla ve
+                satın almanın ilk aşamasında doldurulan isim, soyisim, adres, telefon, e-mail
+                bilgilerinin işlenmesinin hukuka uygunluğu hakkında Aydınlatma Metni’ ni
+                onaylamakla anılan hususlarda bilgilendirildiğini kabul eder. <br>
+                8.2. ALICI, satın alma için Mesafeli Satış Sözleşmesi’ni dikkatlice okur, kabul eder
+                ve onaylar. <br>
+                8.3. ALICI’ nın Ürün Bedeli’ni ödemesini müteakip satışın tamamlanması ile başka
+                bir işleme gerek olmaksızın ÜRÜN, satın alma işleminin tamamlandığı tarihten
+                itibaren ÜRÜN’ e konu dijital üründe belirlenen süre boyunca KULLANICI
+                erişimine açılır.
+            </p>
+
+            <p><b>9. ÜRÜN KAPSAMINDAKİ FİKRİ VESINAİ HAKLAR</b></p>
+
+            <p>
+                ALICI, ÜRÜN’ ün barındırdığı görsel, grafik, ses, yapay zeka kullanımı gibi içeriklerin
+                SATICI mülkiyetinde ya da kullanım hakkının SATICI’ ya ait olduğunu, ÜRÜN’ ü
+                satın almakla yalnızca Mesafeli Satış Sözleşmesi’ nde belirlenen şekilde ve ÜRÜN
+                içeriğinde belirlenen süre ile mevzuat ve sözleşme sınırları içinde, münhasıran
+                kullanma hakkını haiz olduğunu beyan ve kabul eder.
+            </p>
+
+            <p><b>10. KİŞİSEL VERİLERİN KORUNMASI</b></p>
+
+            <p> 
+                10.1. ALICI, satın alma aşamalarından herhangi birinde SATICI ile paylaşılan kişisel
+                verilerinin; sözleşmenin kurulmasını sağlamak ve kanundan doğan kendi
+                yükümlülüğünü ifa etmek için işleyeceğini ve muhafaza edeceğini bilir. <br>
+                10.2. ALICI, Kişisel Verilerin Korunması Kanunu kapsamında hazırlanan Aydınlatma
+                Metni’ne www.hukukasistani.com adresinden erişebilir.
+            </p>
+
+            <p><b>11. DİJİTAL İÇERİKLERİN ÇALIŞMASI HAKKINDA</b></p>
+
+            <p> 11.1. Dijital Ürün, internet erişimi gerektirir. Söz konusu internet bağlantısının
+                sağlanması, kalitesi ve güvenliği KULLANICI sorumluluğundadır. <br>
+                11.2. Dijital Ürün, yalnızca bir bilgisayar ve bir telefonda veya bir tablet ve bir
+                telefonda kullanılabilir. Tablet, telefon ve bilgisayarda birlikte kurulum
+                mümkündürancakaynıandasadecebir cihazdan erişim sağlayabilir.
+            </p>
+
+            <p><b>12. DİJİTAL İÇERİKLERİN İŞLEVSELLİĞİNİ ETKİLEYEBİLECEK TEKNİK KORUMA ÖNLEMLERİ</b></p>
+
+            <p>
+                12.1. ÜRÜN içeriklerine internet üzerinden erişim sağlanması mümkün olup,
+                bulunulan yerdeki internet bağlantı yöntem ve hızı, kullanılmakta olan elektronik
+                cihazın teknik özellikleri, ÜRÜN’ den etkin ve verimli yararlanılmasını
+                etkileyebilecektir. Bu nedenle ALICI/KULLANICI’ nın, Ürün’den en iyi şekilde
+                yararlanabilmesi için yeterli hızda bir internet bağlantısına ve bağlantıyı
+                destekleyen donanıma sahip bir elektronik cihaza sahip olması önerilir. <br>
+                12.2. ÜRÜN’ den yararlanmak yüksek data transferini gerektirebileceğinden
+                internet servis sağlayıcısının yapabileceği ek ücretlendirmeler ile limit-kota
+                aşımlarından ve diğer nedenlerden kaynaklanabilecek ücretlendirmelerden
+                SATICI sorumlu değildir. <br>
+                12.3. Dijital içeriklerin mobil veya masaüstü cihazlarda çalıştırılması için üçüncü
+                taraflarca sağlanan uygulamalara ilişkin her türlü sorumluluk ALICI/KULLANICI’ ya
+                aittir.
+            </p>
+
+            <p><b>13. MÜCBİR SEBEP</b></p>
+
+            <p> 
+                13.1. Hukuken ‘mücbir sebep’ sayılan ve kabul edilen tüm hallerde, SATICI’ nın işbu
+                ÖnBilgilendirme Formu ve Mesafeli Satış Sözleşmesi ile belirlenen
+                yükümlülüklerinden herhangi birini geç veya eksik ifa etmesi veya ifa etmemesi
+                halinde sorumluluğu geçici olarak askıya alınacaktır. ALICI/KULLANICI bu veya bu
+                gibi durumlarda, SATICI’ nın ifada gecikmesi, eksik ifası, ifa etmemesi veya
+                temerrüt olarak adlandırılmayacağını veya bu durumlar için SATICI’ dan herhangi
+                bir isim altında tazminat talep edilemeyeceğini bilir ve kabul eder. <br>
+                13.2. “Mücbir sebep” terimi; doğal afet, salgın hastalık, isyan, savaş, grev, iletişim
+                sorunları, altyapı ve internet arızaları, elektrik kesintisi ve kötü hava koşulları,
+                mahkemelerce websitesine erişimin engellenmesine yönelik verilen ihtiyati
+                tedbir kararları da dahil ve fakat bunlarla sınırlı olmamak kaydıyla, SATICI’ nın
+                kusuruyla neden olmadığı, kontrolü haricinde gelişen kaçınılamayacak olaylar
+                olarak yorumlanır.
+            </p>
+
+            <p><b>14. UYUŞMAZLIK HALİNDE BAŞVURU MERCİİLERİ</b></p>
+
+            <p> 
+                14.1. ALICI, soru, talep ve şikayetleri için destek.hukukasistani@gmail.com e-posta
+                adresinden iletişim kurabilir. <br>
+                14.2. Ayrıca, ALICI şikâyet ve itirazlar konusunda, her takvim yılı başından itibaren
+                geçerli olmak üzere Ticaret Bakanlığı tarafından ilan edilen parasal sınıra kadar
+                olan başvurularını Tüketici Hakem Heyeti’ne; söz konusu parasal sınırın üzerindeki
+                başvurularını ise Tüketici Mahkemesi’ne yapabilir. <br>
+                14.3. ALICI, ÜRÜN’ ün temel niteliklerine, satış fiyatına, ödeme şekline, ifasına
+                ilişkin bilgiler dahil fakat bunlarla sınırlı olmamak üzere ÜRÜN ile ilgili her türlü
+                bilgiyi okuduğunu, anladığını ve onayladığını kabul ve beyan eder. <br>
+                14.4. ALICI’ nın işbu Ön Bilgilendirme Formu’ nun bir örneğini yazıcıdan
+                alabileceği gibi dijital olarak da saklaması mümkündür. Onanan işbu Ön
+                Bilgilendirme Formu’ nun bir örneği, SATICI tarafından ilgili mevzuatta öngörülen
+                süreler boyunca saklanır.
+            </p>
+
+            <p><b>15. İSTİSNA</b></p>
+
+            <p>
+                İşbu ön bilgilendirme formunda yer alan ve 6502 sayılı Tüketicinin Korunması
+                Hakkında Kanundan doğarak tüketicilere hukuki koruma sağlayan madde
+                hükümleri sadece ALICI’ nın Tüketici olduğu hallerde geçerli olarak hüküm ifade
+                edecek olup; alıcının 6502 sayılı kanunda yer alan Tüketici tanımına uymadığı
+                hallerde ilgili maddeler taraflar arasında hüküm ifade etmeyecektir.
+                ALICI; 6502 S.K.’un M. 48, f.2 ve Mes. Söz. Yön. 5., 6. ve 7. maddeleri gereğince
+                ÖnBilgileri okuyup bilgi sahibi olduğunu ve elektronik ortamda gerekli teyidi
+                verdiğini kabul, taahhüt ve beyan eder.
+            </p>
+
+            <p><b>YASAL BİLGİLENDİRME</b></p>
+
+            <p> 
+                Web sitemize ve şirketimize karşı yapılacak olan itibarsızlaştırma saldırıları
+                ve hareketlerine karşı www.hukukasistani.com olarak yasal tedbirler
+                alacağımızı ve bu konuda yasaların bize verdiği kanuni hakları sonuna
+                kadar kullanmaktan çekinmeyeceğimizi bildiririz.
+            </p>
+        </div>
+
+        <div id="mesafeliSatisSozlesmesi">
+
+            <h2>Mesafeli Satış Sözleşmesi</h1>
+            <p><b>1.TARAFLAR</b></p>
+
+            <p> 
+                İşbu Sözleşme aşağıdaki taraflar arasında aşağıda belirtilen hüküm ve
+                şartlar çerçevesinde imzalanmıştır.
+            </p>
+
+            <p>1. ‘ALICI’; (sözleşmede bundan sonra "ALICI" olarak anılacaktır)</p>
+
+            <p id="mesafeliSatisAliciAdSoyad">AD - SOYAD:</p>
+
+            <p id="mesafeliSatisAliciAdres">ADRES:</p>
+
+            <p>2. ‘SATICI’ ; (sözleşmede bundan sonra "SATICI" olarak anılacaktır)</p>
+
+            <p>AD - SOYAD: Berk Öcal</p>
+
+            <p>ADRES:</p>
+
+            <p>
+                İş bu sözleşmeyi kabul etmekle ALICI, sözleşme konusu siparişi onayladığı
+                takdirde sipariş konusu bedeli ve varsa kargo ücreti, vergi gibi belirtilen ek
+                ücretleri
+                ödeme yükümlülüğü altına gireceğini ve bu konuda
+                bilgilendirildiğini peşinen kabul eder.
+            </p>
+
+            <p><b>2.TANIMLAR</b></p>
+
+            <p>
+                İşbu sözleşmenin uygulanmasında ve yorumlanmasında aşağıda yazılı
+                terimler karşılarındaki yazılı açıklamaları ifade edeceklerdir.
+                BAKAN: Gümrük ve Ticaret Bakanı’nı, <br>
+                BAKANLIK: Gümrük ve Ticaret Bakanlığı’nı, <br>
+                KANUN: 6502 sayılı Tüketicinin Korunması Hakkında Kanun’u, <br>
+                YÖNETMELİK: Mesafeli Sözleşmeler Yönetmeliği’ni (RG:27.11.2014/29188) <br>
+                HİZMET: Bir ücret veya menfaat karşılığında yapılan ya da yapılması
+                taahhüt edilen mal sağlama dışındaki her türlü tüketici işleminin konusunu, <br>
+                SATICI: Ticari veya mesleki faaliyetleri kapsamında tüketiciye mal sunan
+                veya mal sunan adına veya hesabına hareket eden şirketi, <br>
+                ALICI: Bir mal veya hizmeti ticari veya mesleki olmayan amaçlarla edinen,
+                kullanan veya yararlanan gerçek ya da tüzel kişiyi, <br>
+                SİTE: SATICI’ya ait internet sitesini, <br>
+                SİPARİŞ VEREN: Bir mal veya hizmeti SATICI’ya ait internet sitesi
+                üzerinden talep eden gerçek ya da tüzel kişiyi, <br>
+                TARAFLAR: SATICI ve ALICI’yı, <br>
+                SÖZLEŞME: SATICI ve ALICI arasında akdedilen işbu sözleşmeyi, <br>
+                MAL: Alışverişe konu olan taşınır eşyayı ve elektronik ortamda kullanılmak
+                üzere hazırlanan yazılım, ses, görüntü ve benzeri gayri maddi malları ifade
+                eder.
+            </p>
+
+            <p><b>3.KONU</b></p>
+
+            <p>
+                İşbu Sözleşme, ALICI’nın, SATICI’ya ait internet sitesi üzerinden elektronik
+                ortamda siparişini verdiği aşağıda nitelikleri ve satış fiyatı belirtilen ürünün
+                satışı ve teslimi ile ilgili olarak 6502 sayılı Tüketicinin Korunması Hakkında
+                Kanun ve Mesafeli Sözleşmelere Dair Yönetmelik hükümleri gereğince
+                tarafların hak ve yükümlülüklerini düzenler.
+                Listelenen ve sitede ilan edilen fiyatlar satış fiyatıdır. İlan edilen fiyatlar ve
+                vaatler güncelleme yapılana ve değiştirilene kadar geçerlidir. Süreli olarak
+                ilan edilen fiyatlar ise belirtilen süre sonuna kadar geçerlidir.
+            </p>
+
+            <p><b>4. SATICI BİLGİLERİ</b></p>
+
+            <p>
+                Ünvanı: Berk Öcal <br>
+                Adres: <br>
+                Telefon: 05366572109 <br>
+                E-Posta: destek.hukukasistani@gmail.com <br>
+            </p>
+
+            <p><b>5. ALICI BİLGİLERİ</b></p>
+
+            <p id="mesafeliSatisAliciAdSoyad2">Teslim edilecek kişi:</p>
+
+            <p id="mesafeliSatisAliciTelefon">Telefon:</p>
+
+            <p id="mesafeliSatisAliciEposta">E-Posta/kullanıcı adı:</p>
+
+            <p><b>6. SİPARİŞ VEREN KİŞİ BİLGİLERİ</b></p>
+
+            <p id="mesafeliSatisTeslimEdilecekAdSoyad">Ad/Soyad/Unvan:</p>
+
+            <p id="mesafeliSatisTeslimEdilecekAdres">Adres:</p>
+
+            <p id="mesafeliSatisTeslimEdilecekTelefon">Telefon:</p>
+
+            <p id="mesafeliSatisTeslimEdilecekEposta">E-Posta/kullanıcı adı:</p>
+
+            <p><b>7. SÖZLEŞME KONUSU ÜRÜN/ÜRÜNLER BİLGİLERİ</b></p>
+
+            <p>
+                1. Malın /Ürün/Ürünlerin/ Hizmetin temel özelliklerini (türü, miktarı,marka/modeli,rengi,adedi) SATICI’ya ait internet
+                sitesinde yayınlanmaktadır. Satıcı tarafından kampanya düzenlenmiş ise ilgili ürünün
+                temel özelliklerini kampanya süresince inceleyebilirsiniz. Kampanya
+                tarihine kadar geçerlidir. <br>
+                2. Listelenen ve sitede ilan edilen fiyatlar satış fiyatıdır. İlan edilen fiyatlar
+                ve vaatler güncelleme yapılana ve değiştirilene kadar geçerlidir. Süreli
+                olarak ilan edilen fiyatlar ise belirtilen süre sonuna kadar geçerlidir. <br>
+                3. Sözleşme konusu mal ya da hizmetin tüm vergiler dâhil satış fiyatı
+                aşağıda gösterilmiştir.
+            </p>
+
+            <p>
+                Ürün Açıklaması: Hukuki konularda bilgi verebilen ve dilekçe yazabilen
+                yapay zeka. <br>
+                Adet: 1
+            </p>
+
+            <p id="price">Birim Fiyatı:</p>
+
+            <p id="totalPrice">KDV Dahil Toplam Tutar:</p>
+
+            <p id="paymentMethodandPaymentPlan">Ödeme Şekli ve Planı:</p>
+
+            <p id="mesafeliSatisTeslimEdilecekKisi">Teslim Edilecek kişi:</p>
+
+            <p id="faturaAdresi">Fatura Adresi:</p>
+
+            <p id="siparisTarihi">Sipariş Tarihi:</p>
+
+            <p>Teslimat tarihi: Ödeme yapılıp, onaylandıktan hemen sonra anında otomatik ve çevrimiçi olarak otomatik teslimat yapılacaktır.</p>
+
+            <p>Teslim şekli: Çevrimiçi Teslim</p>
+
+            <p><b>8. FATURA BİLGİLERİ</b></p>
+
+            <p id="faturaAdSoyad">Ad/Soyad/Unvan:</p>
+
+            <p id="faturaAdres">Adres:</p>
+
+            <p id="faturaTelefon">Telefon:</p>
+
+            <p id="faturaEposta">E-Posta/kullanıcı adı:</p>
+
+            <p>Fatura teslim: E-Posta’ya yollanacak olan e-posta gönderimi ile yapılacaktır.</p>
+
+            <p><b>9. GENEL HÜKÜMLER</b></p>
+
+            <p>
+                9.1. ALICI, SATICI’ya ait internet sitesinde sözleşme konusu ürünün temel
+                nitelikleri, satış fiyatı ve ödeme şekli ile teslimata ilişkin ön bilgileri okuyup,
+                bilgi sahibi olduğunu, elektronik ortamda gerekli teyidi verdiğini kabul,
+                beyan ve taahhüt eder. ALICI’nın; Ön Bilgilendirmeyi elektronik ortamda
+                teyit etmesi, mesafeli satış sözleşmesinin kurulmasından evvel, SATICI
+                tarafından ALICI' ya verilmesi gereken adresi, siparişi verilen ürünlere ait
+                temel özellikleri, ürünlerin vergiler dâhil fiyatını, ödeme ve teslimat bilgilerini
+                de doğru ve eksiksiz olarak edindiğini kabul, beyan ve taahhüt eder. <br>
+                9.2. Sözleşme konusu her bir ürün, ödeme yapıldıktan sonra anında
+                internet aktivasyonu yöntemi aracılığıyla otomatik ALICI’ya teslim edilir. <br>
+                9.3. SATICI, Sözleşme konusu ürünü eksiksiz, siparişte belirtilen niteliklere
+                uygun ve varsa garanti belgeleri, kullanım kılavuzları işin gereği olan bilgi
+                ve belgeler ile teslim etmeyi, her türlü ayıptan arî olarak yasal mevzuat
+                gereklerine göre sağlam, standartlara uygun bir şekilde işi doğruluk ve
+                dürüstlük esasları dâhilinde ifa etmeyi, hizmet kalitesini koruyup
+                yükseltmeyi, işin ifası sırasında gerekli dikkat ve özeni göstermeyi, ihtiyat
+                ve öngörü ile hareket etmeyi kabul, beyan ve taahhüt eder. <br>
+                9.4. SATICI, sözleşmeden doğan ifa yükümlülüğünün süresi dolmadan
+                ALICI’yı bilgilendirmek ve açıkça onayını almak suretiyle eşit kalite ve
+                fiyatta farklı bir ürün tedarik edebilir. <br>
+                9.5. SATICI, sipariş konusu ürün veya hizmetin yerine getirilmesinin
+                imkânsızlaşması halinde sözleşme konusu yükümlülüklerini yerine
+                getiremezse, bu durumu, öğrendiği tarihten itibaren 3 gün içinde yazılı
+                olarak tüketiciye bildireceğini, 14 günlük süre içinde toplam bedeli ALICI’ya
+                iade edeceğini kabul, beyan ve taahhüt eder. <br>
+                9.6. ALICI, Sözleşme konusu ürünün teslimatı için işbu Sözleşme’yi
+                elektronik ortamda teyit edeceğini, herhangi bir nedenle sözleşme konusu
+                ürün bedelinin ödenmemesi ve/veya banka kayıtlarında iptal edilmesi
+                halinde, SATICI’nın sözleşme konusu ürünü teslim yükümlülüğünün sona
+                ereceğini kabul, beyan ve taahhüt eder.
+            </p>
+
+            <p> 
+                9.7. SATICI, tarafların iradesi dışında gelişen, önceden öngörülemeyen ve
+                tarafların borçlarını yerine getirmesini engelleyici ve/veya geciktirici hallerin
+                oluşması gibi mücbir sebepler halleri nedeni ile sözleşme konusu ürünü
+                süresi içinde teslim edemez ise, durumu ALICI'ya bildireceğini kabul, beyan
+                ve taahhüt eder. ALICI da siparişin iptal edilmesini, sözleşme konusu
+                ürünün varsa emsali ile değiştirilmesini ve/veya teslimat süresinin
+                engelleyici durumun ortadan kalkmasına kadar ertelenmesini SATICI’dan
+                talep etme hakkını haizdir. <br>
+                9.8. SATICININ, ALICI tarafından siteye kayıt formunda belirtilen veya daha
+                sonra kendisi tarafından güncellenen adresi, e-posta adresi, sabit ve mobil
+                telefon hatları ve diğer iletişim bilgileri üzerinden mektup, e-posta, SMS,
+                telefon görüşmesi ve diğer yollarla iletişim, pazarlama, bildirim ve diğer
+                amaçlarla ALICI’ya ulaşma hakkı bulunmaktadır. ALICI, işbu sözleşmeyi
+                kabul etmekle SATICI’nın kendisine yönelik yukarıda belirtilen iletişim
+                faaliyetlerinde bulunabileceğini kabul ve beyan etmektedir. <br>
+                9.9. ALICI ile sipariş esnasında kullanılan kredi kartı hamilinin aynı kişi
+                olmaması veya ürünün ALICI’ya tesliminden evvel, siparişte kullanılan kredi
+                kartına ilişkin güvenlik açığı tespit edilmesi halinde, SATICI, kredi kartı
+                hamiline ilişkin kimlik ve iletişim bilgilerini, siparişte kullanılan kredi kartının
+                bir önceki aya ait ekstresini yahut kart hamilinin bankasından kredi kartının
+                kendisine ait olduğuna ilişkin yazıyı ibraz etmesini ALICI’dan talep edebilir.
+                ALICI’nın talebe konu bilgi/belgeleri temin etmesine kadar geçecek sürede
+                sipariş dondurulacak olup, mezkur taleplerin 24 saat içerisinde
+                karşılanmaması halinde ise SATICI, siparişi iptal etme hakkını haizdir. <br>
+                9.10. ALICI, SATICI’ya ait internet sitesine üye olurken verdiği kişisel ve
+                diğer sair bilgilerin gerçeğe uygun olduğunu, SATICI’nın bu bilgilerin
+                gerçeğe aykırılığı nedeniyle uğrayacağı tüm zararları, SATICI’nın ilk
+                bildirimi üzerine derhal, nakden ve defaten tazmin edeceğini beyan ve
+                taahhüt eder. <br>
+                9.11. ALICI, SATICI’ya ait internet sitesini kullanırken yasal mevzuat
+                hükümlerine riayet etmeyi ve bunları ihlal etmemeyi baştan kabul ve
+                taahhüt eder. Aksi takdirde, doğacak tüm hukuki ve cezai yükümlülükler
+                tamamen ve münhasıran ALICI’yı bağlayacaktır. <br>
+                9.12. ALICI, SATICI’ya ait internet sitesini hiçbir şekilde kamu düzenini
+                bozucu, genel ahlaka aykırı, başkalarını rahatsız ve taciz edici şekilde,
+                yasalara aykırı bir amaç için, başkalarının maddi ve manevi haklarına
+                tecavüz edecek şekilde kullanamaz. Ayrıca, üye başkalarının hizmetleri
+                kullanmasını önleyici veya zorlaştırıcı faaliyet (spam, virus, truva atı, vb.)
+                işlemlerde bulunamaz. <br>
+                9.13. SATICI’ya ait internet sitesinin üzerinden, SATICI’nın kendi
+                kontrolünde olmayan ve/veya başkaca üçüncü kişilerin sahip olduğu
+                ve/veya işlettiği başka web sitelerine ve/veya başka içeriklere link verilebilir.
+                Bu linkler ALICI’ya yönlenme kolaylığı sağlamak amacıyla konmuş olup
+                herhangi bir web sitesini veya o siteyi işleten kişiyi desteklememekte ve
+                Link verilen web sitesinin içerdiği bilgilere yönelik herhangi bir garanti
+                niteliği taşımamaktadır. <br>
+                9.14. İşbu sözleşme içerisinde sayılan maddelerden bir ya da birkaçını ihlal
+                eden üye işbu ihlal nedeniyle cezai ve hukuki olarak şahsen sorumlu olup,
+                SATICI’yı bu ihlallerin hukuki ve cezai sonuçlarından ari tutacaktır. Ayrıca;
+                işbu ihlal nedeniyle, olayın hukuk alanına intikal ettirilmesi halinde,
+                SATICI’nın üyeye karşı üyelik sözleşmesine uyulmamasından dolayı
+                tazminat talebinde bulunma hakkı saklıdır.
+            </p>
+
+            <p><b>10. CAYMA HAKKI</b></p>
+
+            <p>
+                ALICI; Dijital Ürünü satın alma işleminin gerçekleşmesinin
+                akabinde-Mesafeli Sözleşmeler Yönetmeliği’nin m.15/ğ bendi uyarınca
+                cayma hakkının bulunmadığını bu sözleşme hükümlerince teyit, kabul ve
+                beyan eder.
+            </p>
+
+            <p><b>11. CAYMA HAKKI KULLANILAMAYACAK ÜRÜNLER</b></p>
+
+            <p>
+                ALICI’nın isteği veya açıkça kişisel ihtiyaçları doğrultusunda hazırlanan ve
+                geri gönderilmeye müsait olmayan, iç giyim alt parçaları, mayo ve bikini
+                altları, makyaj malzemeleri, tek kullanımlık ürünler, çabuk bozulma tehlikesi
+                olan veya son kullanma tarihi geçme ihtimali olan mallar, ALICI’ya teslim
+                edilmesinin ardından ALICI tarafından ambalajı açıldığı takdirde iade
+                edilmesi sağlık ve hijyen açısından uygun olmayan ürünler, teslim
+                edildikten sonra başka ürünlerle karışan vedoğası gereği ayrıştırılması
+                mümkün olmayan ürünler, Abonelik sözleşmesi kapsamında sağlananlar
+                dışında, gazete ve dergi gibi süreli yayınlara ilişkin mallar, Elektronik
+                ortamda anında ifa edilen hizmetler veya tüketiciye anında teslim edilen
+                gayrimaddi mallar,ile ses veya görüntü kayıtlarının, kitap, dijital içerik,
+                yazılım programlarının, veri kaydedebilme ve veri depolama cihazlarının,
+                bilgisayar sarf malzemelerinin, ambalajının ALICI tarafından açılmış olması
+                halinde iadesi Yönetmelik gereği mümkün değildir. Ayrıca Cayma hakkı
+                süresi sona ermeden önce, tüketicinin onayı ile ifasına başlanan hizmetlere
+                ilişkin cayma hakkının kullanılması daYönetmelik gereği mümkün değildir.
+                Kozmetik ve kişisel bakım ürünleri, iç giyim ürünleri, mayo, bikini, kitap,
+                kopyalanabilir yazılım ve programlar, DVD, VCD, CD ve kasetler ile
+                kırtasiye sarf malzemeleri (toner, kartuş, şerit vb.) iade edilebilmesi için
+                ambalajlarının açılmamış, denenmemiş, bozulmamış ve kullanılmamış
+                olmaları gerekir.
+            </p>
+
+            <p><b>12. TEMERRÜT HALİ VE HUKUKİ SONUÇLARI</b></p>
+
+            <p>
+                ALICI, ödeme işlemlerini kredi kartı ile yaptığı durumda temerrüde düştüğü
+                takdirde, kart sahibi banka ile arasındaki kredi kartı sözleşmesi
+                çerçevesinde faiz ödeyeceğini ve bankaya karşı sorumlu olacağını kabul,
+                beyan ve taahhüt eder. Bu durumda ilgili banka hukuki yollara başvurabilir;
+                doğacak masrafları ve vekâlet ücretini ALICI’dan talep edebilir ve her
+                koşulda ALICI’nın borcundan dolayı temerrüde düşmesi halinde, ALICI,
+                borcun gecikmeli ifasından dolayı SATICI’nın uğradığı zarar ve ziyanını
+                ödeyeceğini kabul, beyan ve taahhüt eder.
+            </p>
+
+            <p><b>13. YETKİLİ MAHKEME</b></p>
+
+            <p>
+                İşbu sözleşmeden doğan uyuşmazlıklarda şikayet ve itirazlar,
+                aşağıdaki kanunda belirtilen parasal sınırlar dâhilinde tüketicinin yerleşim
+                yerinin bulunduğu veya tüketici işleminin yapıldığı yerdeki tüketici sorunları
+                hakem heyetine veya tüketici mahkemesine yapılacaktır. Parasal sınıra
+                ilişkin bilgiler aşağıdadır: <br>
+                28/05/2014 tarihinden itibaren geçerli olmak üzere: <br>
+                a- 6502 sayılı Tüketicinin Korunması Hakkında Kanun’un 68. Maddesi
+                gereği değeri 2.000,00 (ikibin) TL’nin altında olan uyuşmazlıklarda ilçe
+                tüketici hakem heyetlerine, <br>
+                b- Değeri 3.000,00(üçbin)TL’ nin altında bulunan uyuşmazlıklarda il tüketici
+                hakem heyetlerine, <br>
+                c- Büyükşehir statüsünde bulunan illerde ise değeri 2.000,00 (ikibin) TL ile
+                3.000,00(üçbin)TL’ arasındaki uyuşmazlıklarda il tüketici hakem heyetlerine
+                başvuru yapılmaktadır. <br>
+                İşbu Sözleşme ticari amaçlarla yapılmaktadır.
+            </p>
+
+            <p><b>14. YÜRÜRLÜK</b></p>
+
+            <p>
+                ALICI, Site üzerinden verdiği siparişe ait ödemeyi gerçekleştirdiğinde işbu
+                sözleşmenin tüm şartlarını kabul etmiş sayılır. SATICI, siparişin
+                gerçekleşmesi öncesinde işbu sözleşmenin sitede ALICI tarafından okunup
+                kabul edildiğine dair onay alacak şekilde gerekli yazılımsal düzenlemeleri
+                yapmakla yükümlüdür. <br> <br>
+                SATICI: Berk Öcal
+            </p>
+
+            <p id="mesafeliSatisAliciAdSoyad3">ALICI:</p>
+
+            <p id="tarih">TARİH:</p>
+
+        </div>
+
+    </div>
+
+    <div id="mainContainer" class="half">
+
+        <p id="sozlesmeveFormWarning">Sözleşmeyi ve ön bilgilendirme formunu okuduğunuzu onaylamanız gerekiyor.</p>
+
+        <p id="paymentText">Ödeme için bilgilerinizi giriniz:</p>
+
+        <hr id="line">
+
+        <form onsubmit="getPaymentData(); return false;" method="post" id="paymentDataForm">
+
+            <div id="nameandSurname">
+                <input type="text" id="name" placeholder="Adınız" name="name" required>
+    
+                <input type="text" id="surname" placeholder="Soyadınız" name="surname" required>
+            </div>
+            
+            <input type="number" id="identityNumber" placeholder="T.C Kimlik Numaranız" name="identityNumber" required>
+    
+            <input type="email" id="email" placeholder="E-Posta" name="email" required>
+    
+            <input type="number" id="phoneNumber" placeholder="Telefon(Başında 0 olmadan)" name="phoneNumber" required>
+    
+            <input type="text" id="city" placeholder="Şehir" name="city" required>
+    
+            <input type="text" id="district" placeholder="İlçe" name="district" required>
+    
+            <input type="text" id="country" placeholder="Ülke" name="country" required>
+    
+            <input type="text" id="adress" placeholder="Adresiniz" name="adress" required>
+
+            <button type="submit" id="forwardButton">İlerle</button>
+
+        </form>
+
+        <form id="forwardtoPaymentForm" onsubmit="return false;">
+            <div id="checkboxContainer">
+
+                <label for="sozlesmeveFormOnay">Ön Bilgilendirme Formunu ve Mesafeli Satış Sözleşmesini okudum ve onaylıyorum.</label>
+                <input type="checkbox" id="sozlesmeveFormOnay" name="sozlesmeveFormOnay" required>
+
+            </div>
+
+            <button type="button" id="download">Sözleşmeyi İndir</button>
+
+            <button type="submit" id="forwardtoPaymentButton">Ödemeye Geç</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

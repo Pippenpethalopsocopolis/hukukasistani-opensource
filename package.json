@@ -1,0 +1,27 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "",
+  "main": "apijs/api.js",
+  "type": "module",
+  "scripts": {
+    "start": "node apijs/api.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "iyzipay": "^2.0.61",
+    "mailgun.js": "^10.2.1",
+    "mysql2": "^3.6.5",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.29.1",
+    "pdfkit": "^0.15.0",
+    "twilio": "^4.23.0"
+  }
+}

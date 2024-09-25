@@ -1,0 +1,55 @@
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğrulama</title>
+    <link rel="stylesheet" href="emailVerification.css">
+
+    <script src="apijs/emailVerification.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="headerdes">
+
+        <img src="assets/logos/logobeyazdairesel.png" id="logobeyazdairesel">
+
+        <a id="line"></a>
+
+        <a id="mainpage" href="https://hukukasistani.com/">Ana Sayfa</a>
+
+        <a id="profile" href="https://hukukasistani.com/profile">Profil</a>
+
+        <a id="login" href="https://hukukasistani.com/login">Giriş Yap</a>
+
+        <a id="register" href="https://hukukasistani.com/register">Kaydol</a>
+
+        <a id="about" href="https://hukukasistani.com/hakkinda">Hakkında</a>
+
+    </header>
+
+    <div id="baslik">Hukuk Asistanı</div>
+
+    <div id="mainCard">
+
+        <form onsubmit="emailVerification(); return false;" method="post" id="verificationForm">
+            
+            <p>Mailinize gelen kodu aşağıdaki alana giriniz:</p>
+
+            <input type="text" placeholder="E-Mailinize Gelen Kodu Giriniz" id="verificationInput" name="verificationInput" required>
+
+            <p>Telefonunuza gelen kodu aşağıdaki alana giriniz:</p>
+
+            <input type="text" placeholder="Telefonunuza Gelen Kodu Giriniz" id="phoneVerificationInput" name="phoneVerificationInput" required>
+
+            <button id="sendbutton" type="submit">Gönder</button>
+
+        </form>
+        
+    </div>
+
+</body>
+</html>

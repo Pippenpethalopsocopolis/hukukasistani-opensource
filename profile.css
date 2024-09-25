@@ -1,0 +1,774 @@
+@font-face {
+    font-family: 'Computer says no';
+    src: url('assets/fonts/computer-says-no.woff') format('woff');
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Computer says no';
+}
+
+body {
+    background: #f4f4f4;
+    background-attachment: fixed;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+    color: #212427;
+}
+
+/* Header Kısmı */
+.headerdes{
+    display: flex;
+    height: 5vh;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: rgb(75, 27, 202);
+    box-shadow: 0px 4px 2px rgba(75, 27, 202);
+    position: fixed;
+    z-index: 8000;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.headerdes a{
+    text-decoration: none;
+    color: #f4f4f4;
+    padding: 0.9rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+  
+.headerdes a:hover{
+    background-color: rgb(84, 30, 231);
+}
+
+#logobeyazdairesel{
+    height: 30px;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+#line{
+    border-right: rgb(172, 172, 172) 1px solid;
+    margin-top: 4px;
+    margin-right: 10px;
+}
+
+#line:hover{
+    background-color: rgb(75, 27, 202);
+}
+/* Header Kısmı */
+
+/* Sidebar Kısmı */
+#sidebar {
+    width: 34vh;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    margin-top: 40px;
+    transition: 0.5s;
+}
+
+.topsidebarP {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-size: x-large;
+}
+
+.topsidebarP:hover {
+    color: #f1f1f1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 19%;
+    width: 100%;
+}
+
+.dropbtn {
+    padding-left: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 0;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-size: x-large;
+}
+
+.dropbtn:hover {
+    color: #f1f1f1;
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow-x: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.dropdown-content::-webkit-scrollbar{
+    width: 0;
+}
+
+.dropdown-content.show {
+    max-height: 277px;
+}
+
+.cardbox {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    background-color: #f4f4f4;
+    max-height: 100px;
+    overflow-y: auto;
+    margin: 5%;
+    border-radius: 4px;
+    height: 100px;
+    font-family: 'Afacad', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.cardbox::-webkit-scrollbar{
+    width: 0;
+}
+
+.closePopup{
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #818181;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 11%;
+    left: 83.5%;
+    font-family: 'Computer says no';
+    font-size: xx-large;
+    background: none;
+    border: none;
+}
+
+.closePopup:hover{
+    color: #acacac;
+}
+
+#printButton{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e3e3e0;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    left: 82%;
+    top: 72%;
+}
+
+#printButton:hover{
+    background: #d6d6d3;
+}
+
+@media print{
+    .headerdes, #maincontainer, #freeTrialEndedContainer, .topsidebarP, #closeBtn, #buyButton, .overlay{
+        display: none;
+    }
+
+    .cardbox {
+        visibility: hidden;
+        overflow-y: visible !important;
+        height: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+    }
+
+    .aicardboxText{
+        visibility: visible;
+        display: block;
+    }
+
+    .usercardBoxText{
+        display: none !important;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Ensure overlay appears below popup */
+    display: none;
+}
+
+.userContentLabel{
+    line-break: normal;
+}
+
+.aicardboxText{
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    display: block;
+}
+
+#buyButton{
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #4CAF50;
+    font-family: 'Computer says no';
+    font-size: x-large;
+    margin-left: 6%;
+    margin-top: 10%;
+    height: 50px;
+    border-radius: 4px;
+    box-shadow: rgba(154, 255, 92, 0.2) 0px 2px 8px 0px;
+    transition: box-shadow 0.5s linear;
+    display: none;
+}
+
+#buyButton:hover{
+    background-color: #45a049;
+    box-shadow: 0 0 15px rgb(115, 255, 80);
+}
+
+#cancelButton{
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #272727;
+    font-family: 'Computer says no';
+    font-size: medium;
+    margin-left: 6%;
+    margin-top: 20%;
+    height: 20px;
+    width: 87%;
+    border-radius: 4px;
+    display: none;
+}
+
+#changePassword{
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #272727;
+    font-family: 'Computer says no';
+    font-size: medium;
+    margin-left: 6%;
+    margin-top: 20%;
+    height: 20px;
+    width: 87%;
+    border-radius: 4px;
+}
+
+#changePasswordContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 15px rgb(112, 112, 112);
+    padding: 10px;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+}
+
+#changePasswordInput{
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    border-radius: 4px;
+    color: black;
+    font-family: 'Afacad', sans-serif;
+    margin-bottom: 10px;
+}
+
+#changePasswordInput:hover{
+    border: #4CAF50 solid 2px;
+}
+
+#changePasswordInput:focus{
+    outline-color: #4CAF50;
+}
+
+#saveChangePassword{
+    background: #4CAF50;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Afacad', sans-serif;
+    width: 50%;
+    padding: 5px;
+    font-size: small;
+    font-weight: bold;
+}
+
+#saveChangePassword:hover{
+    background: #45a049;
+}
+
+#changesSaved{
+    display: none;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    animation: popupFadeInOut 5s ease;
+    color: #f4f4f4;
+    font-size: medium;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes popupFadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* Sidebar Kısmı */
+
+#overlayForCancel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#questionContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 4px;
+    width: 300px;
+    font-size: x-large;
+}
+
+#cancelIt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4px;
+    background-color: rgb(231, 231, 231);
+    width: 100%;
+    box-shadow: rgba(75, 27, 202, 0.1) 0px 2px 8px 0px;
+    transition: box-shadow 0.5s linear;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: x-large;
+    height: 40px;
+}
+
+#dontCancel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4px;
+    background-color: rgb(231, 231, 231);
+    width: 100%;
+    box-shadow: rgba(75, 27, 202, 0.1) 0px 2px 8px 0px;
+    transition: box-shadow 0.5s linear;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: x-large;
+    height: 40px;
+}
+
+#maincontainer {
+    margin-left: 250px;
+    padding: 16px;
+    margin-top: 5vh;
+    transition: margin-left 0.5s;
+    width: 83%;
+}
+
+/* Sidebar kapama açma butonlarıyla ile ilgili kısım */
+#closeBtn,
+#openBtn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #818181;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    font-family: 'Computer says no';
+    font-size: xx-large;
+}
+
+#openBtn{
+    color: rgb(75, 27, 202);
+}
+
+#closeBtn {
+    right: 10px;
+}
+
+#openBtn {
+    left: 10px;
+    margin-top: 5vh;
+}
+
+#closeBtn:hover {
+    color: #f1f1f1;
+}
+
+#openBtn:hover{
+    color: #acacac;
+}
+
+#closeBtn:focus,
+#openBtn:focus {
+    outline: none;
+}
+/* Sidebar kapama açma butonlarıyla ile ilgili kısım */
+
+/* Yapay zekayle konuşulan kısmın tasarımları */
+#centerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 8px 0px rgba(198, 197, 197, 1);
+}
+
+#characterLengthSpam{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 8px 0px rgba(198, 197, 197, 1);
+    font-size: xx-large;
+    flex-direction: column;
+}
+
+#characterLengthSpamHeader{
+    color: red;
+    font-size: 50px;
+}
+
+#spam{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 8px 0px rgba(198, 197, 197, 1);
+    font-size: xx-large;
+    flex-direction: column;
+}
+
+#spamHeader{
+    color: red;
+    font-size: 40px;
+}
+
+#freeTrialEndedContainer{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 8px 0px rgba(198, 197, 197, 1);
+    font-size: xx-large;
+    flex-direction: column;
+}
+
+#freeTrialEndedContainer p{
+    font-size: 45px;
+    text-shadow: 0 0 15px rgba(75, 27, 202, 1);
+    animation: fade 3s ease-in-out forwards;
+}
+
+#freeTrialEndedContainer button{
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #4CAF50;
+    font-family: 'Computer says no';
+    font-size: xx-large;
+    height: 60px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: rgba(154, 255, 92, 0.2) 0px 2px 8px 0px;
+    transition: box-shadow 0.5s linear;
+    animation: fade 3s ease-in-out forwards;
+}
+
+#freeTrialEndedContainer button:hover{
+    background-color: #45a049;
+    box-shadow: 0 0 15px rgb(115, 255, 80);
+}
+
+@keyframes fade {
+    0% { opacity: 0; } /* Start opacity */
+    100% { opacity: 1; } /* End opacity */
+}
+
+.messages {
+    height: 89%;
+    width: 100%;
+    overflow-y: auto;
+    font-size: large;
+    font-family: 'Afacad', sans-serif;
+}
+
+.aiMessage{
+    width: 100%;
+}
+
+.chatbox{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+form{
+    display: flex;
+}
+
+.input-area {
+    display: flex;
+    margin-top: 10px;
+}
+
+#inputinside {
+    flex: 1;
+    padding: 8px;
+    font-family: 'Afacad', sans-serif;
+    width: 100%;
+    font-size: medium;
+}
+
+#inputinside:hover {
+    border: #45a049 solid 2px;
+}
+
+#inputinside:focus {
+    outline-color: #45a049;
+}
+
+#inputinside:valid{
+    border: #4CAF50 solid 2px;
+}
+
+#aiSendButton {
+    padding: 8px 15px;
+    background: #4CAF50;
+    color: #f4f4f4;
+    border: rgb(42, 40, 40) solid 1px;
+    cursor: pointer;
+    font-family: 'Afacad', sans-serif;
+    font-weight: bold;
+}
+
+#aiSendButton:hover {
+    background: #45a049;
+}
+
+#inputform{
+    width: 100%;
+    height: 45px;
+}
+
+.userinputHeader{
+    display: inline;
+    font-weight: bold;
+}
+
+.aiheaderPDesign{
+    display: inline;
+    font-weight: bold;
+}
+
+.aiPDesign{
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    animation: fade 2s ease-in-out forwards;
+}
+
+#defaultmessage{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 40px;
+    text-shadow: 0 0 15px rgba(75, 27, 202, 1);
+    color: #333;
+    animation: shadowAnim 1s ease-in-out infinite;
+}
+
+.aiMessageTwo{
+    display: flex;
+    font-size: 30px;
+    text-shadow: 0 0 15px rgba(75, 27, 202, 1);
+    color: #333;
+    animation: shadowAnim 1s ease-in-out infinite;
+}
+
+@keyframes shadowAnim{
+    0%{
+        text-shadow: 0 0 15px rgba(75, 27, 202, 0.9);
+    }
+
+    100%{
+        text-shadow: 0 0 15px rgba(75, 27, 202, 1);
+    }
+}
+
+.loader {
+    width: 30px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side,rgba(75, 27, 202, 1) 90%,#0000);
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 50%;
+    animation: l3 1s infinite linear;
+    visibility: hidden;
+}
+
+@keyframes l3 {
+    20%{background-position:0%   0%, 50%  50%,100%  50%}
+    40%{background-position:0% 100%, 50%   0%,100%  50%}
+    60%{background-position:0%  50%, 50% 100%,100%   0%}
+    80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
+/* Yapay zekayle konuşulan kısmın tasarımları */
+
+@media screen and (max-width: 426px) {
+    #mainpage{
+        font-size: 100%;
+    }
+
+    #login{
+        font-size: 100%;
+    }
+
+    #pricing{
+        font-size: 100%;
+    }
+
+    .overlay{
+        height: 100%;
+        width: 100%;
+    }
+
+    .closePopup{
+        top: 38.5%;
+        left: 60%;
+    }
+
+    #printButton{
+        left: 53%;
+        top: 82%;
+    }
+}
+
+@media screen and (max-width: 376px){
+    .closePopup{
+        top: 41%;
+        left: 57%;
+    }
+
+    #printButton{
+        top: 82;
+        left: 50%;
+    }
+
+    #freeTrialEndedContainer p{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 321px){
+    .closePopup{
+        top: 44%;
+        left: 54%;
+    }
+
+    #printButton{
+        top: 82;
+        left: 46%;
+    }
+
+    #freeTrialEndedContainer p{
+        font-size: 35px;
+    }
+}

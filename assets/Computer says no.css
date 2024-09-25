@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Computer says no';
+    src: url('fonts/computer-says-no.eot');
+    src: url('fonts/computer-says-no.eot?#iefix') format('embedded-opentype'),
+         url('fonts/computer-says-no.woff2') format('woff2'),
+         url('fonts/computer-says-no.woff') format('woff'),
+         url('fonts/computer-says-no.ttf')  format('truetype'),
+         url('fonts/computer-says-no.svg#Computer says no') format('svg');
+}

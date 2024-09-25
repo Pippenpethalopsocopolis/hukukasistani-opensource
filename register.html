@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üye Ol</title>
+    <link rel="stylesheet" href="register.css">
+
+    <script src="apijs/registersend.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="headerdes">
+
+        <img src="assets/logos/logobeyazdairesel.png" id="logobeyazdairesel">
+
+        <a id="line"></a>
+
+        <a id="mainpage" href="https://hukukasistani.com">Ana Sayfa</a>
+
+        <a id="profile" href="https://hukukasistani.com/profile">Profil</a>
+
+        <a id="login" href="https://hukukasistani.com/login">Giriş Yap</a>
+
+        <a id="pricing" href="https://hukukasistani.com/pricing">Fiyatlandırma</a>
+
+        <a id="about" href="https://hukukasistani.com/hakkinda">Hakkında</a>
+
+    </header>
+
+    <div id="baslik">Hukuk Asistanı</div>
+
+    <div id="maincontainer">
+
+        <div id="registration-card">
+            
+            <div id="registration-area">
+
+                <form onsubmit="register(); return false;" method="post" id="registerationform">
+
+                    <input type="text" placeholder="Adın" class="adsoyadinput" id="name" name="name" required>
+
+                    <input type="text" placeholder="Soyadın" class="adsoyadinput" id="surname" name="surname" required>
+
+
+                    <input type="email" placeholder="E-posta" id="emailinput" name="email" required>
+                    <p id="emailExistsWarning">Girmiş olduğunuz E-Posta adresi zaten kayıtlı.</p>
+
+                    <input type="number" placeholder="Telefon Numarası (Üyelik Onaylama İşlemi İçin Alınır)" id="phoneInput" name="phoneInput" required>
+                    <p id="phoneExistsWarning">Girmiş olduğunuz telefon numarası zaten kayıtlı.</p>
+                    <p id="phoneNumberLengthWarning">Geçersiz telefon numarası girdiniz. Numaranızın 10 haneli olmasına ve başında "0" olmadan yazmaya dikkat ediniz.</p>
+
+                    <input type="password" placeholder="Şifre" id="sifreinput" name="password" required>
+
+                    <label for="dob" class="dobinput" id="dobLabel">Doğum Tarihi:</label>
+                    <input type="date" placeholder="Doğum Tarihi" name="dob" class="dobinput" id="dobIDinput" required>
+                    <p id="dateofbirthLengthWarning">Doğum tarihiniz yanlış girilmiştir. Lütfen doğru bir şekilde tekrar giriniz.</p>
+
+                    <div class="custom-radio" id="radioButtons">
+
+                        <input type="radio" value="male" name="gender" id="gendermaleinput" required>
+
+                        <span class="checkmark"></span>
+
+                        <label id="labelgenderMale" for="gendermaleinput">Er</label>
+
+                        <label class="textlabel">Erkek</label>
+
+                    </div>
+                    <br>
+                    <div class="custom-radio">
+
+                        <input type="radio" value="female" name="gender" id="genderfemaleinput" required>
+
+                        <span class="checkmark"></span>
+
+                        <label id="labelgenderFemale" for="genderfemaleinput">Ka</label>
+
+                        <label class="textlabel">Kadın</label>
+
+                    </div>
+
+                    <p id="gizlilikveCerez">Üye olarak <span id="gizlilikveCerezSpan">gizlilik politikamızı ve çerez kullanımı politikamızı</span> kabul etmiş sayılırsınız.</p>
+                    <button id="sendbutton" type="submit">Kaydol</button>
+
+                </form>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

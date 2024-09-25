@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="login.css">
+
+    <script src="apijs/loginsend.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="headerdes">
+
+        <img src="assets/logos/logobeyazdairesel.png" id="logobeyazdairesel">
+
+        <a id="line"></a>
+
+        <a id="mainpage" href="https://hukukasistani.com">Ana Sayfa</a>
+
+        <a id="profile" href="https://hukukasistani.com/profile">Profil</a>
+
+        <a id="login" href="https://hukukasistani.com/login">Giriş Yap</a>
+
+        <a id="register" href="https://hukukasistani.com/register">Kaydol</a>
+
+        <a id="pricing" href="https://hukukasistani.com/pricing">Fiyatlandırma</a>
+
+        <a id="about" href="https://hukukasistani.com/hakkinda">Hakkında</a>
+
+    </header>
+
+    <div id="maincontainer">
+
+        <p id="title">Hukuk Asistanı</p>
+
+        <div id="cardcontainer">
+
+            <div>
+
+                <form onsubmit="login(); return false;" method="post" id="loginform">
+
+                    <input type="email" placeholder="E-Posta" id="email" name="email" required>
+
+                    <input type="password" placeholder="Şifre" id="password" name="password" required>
+
+                    <button id="loginbutton" type="submit">Giriş Yap</button>
+
+                    <a id="forgotPassword" href="https://hukukasistani.com/forgotPassword">Şifreni mi unuttun?</a>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

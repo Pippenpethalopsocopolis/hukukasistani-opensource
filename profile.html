@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="profile.css">
+
+    <script src="frontend_scripts/profile.js" defer></script>
+    <script src="apijs/profileinputsend.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="headerdes">
+
+        <img src="assets/logos/logobeyazdairesel.png" id="logobeyazdairesel">
+
+        <a id="line"></a>
+
+        <a id="mainpage" href="https://hukukasistani.com">Ana Sayfa</a>
+
+        <a id="pricing" href="https://hukukasistani.com/pricing">Fiyatlarımız</a>
+
+        <a id="about" href="https://hukukasistani.com/hakkinda">Hakkında</a>
+
+    </header>
+
+    <div id="maincontainer">
+
+        <button id="openBtn">Profil Bilgileri</button>
+        <div id="centerContainer">
+            <div class="chatbox">
+
+                <div class="messages" id="messagesContainer">
+
+                    <p class="aiMessageTwo" id="defaultmessage">Bilgi almak istediğiniz konuyu alttaki alana yazınız.</p>
+                    <p class="aiMessageTwo" id="defaultmessageTwo">- Hukuk Asistanınızla açıkça konuşun ve detaylı bilgi verin.</p>
+                    <p class="aiMessageTwo" id="defaultmessageThree">- Bir avukat ile asistanınız arasındaki tek fark birinin robot olması.</p>
+                    <p class="aiMessageTwo" id="defaultmessageFour">- Hatta çoğu zaman, yapay zekamız kalifiye bir avukattan bile daha doğru bilgiler verecektir.</p>
+                    <p class="aiMessageTwo" id="defaultmessageFive">- Fahiş fiyatlara avukat tutmak mı? Artık öyle bir derdiniz yok.</p>
+
+                </div>
+
+                <div class="loader" id="dotLoader"></div>
+
+                <div class="input-area">
+                    
+                    <form onsubmit="fetchHistory(); aiAnswer(); return false;" method="post" id="inputform">
+
+                        <input type="text" placeholder="Bilgi almak istediğiniz konuyu yazın..." id="inputinside" name="inputinside" required>
+                    
+                        <button id="aiSendButton" type="submit">Gönder</button>
+
+                    </form>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="freeTrialEndedContainer">
+
+            <p>Bedava kullanım hakkınızı doldurdunuz &#128532</p>
+            <p>Aradığın her türlü hukuki bilgiyi almak</p>
+            <p>Resmi belge, dilekçe düzenlemek ve yazmak, hepsini Hukuk Asistanınız halletsin</p>
+            <p>Bir öğün yemekten daha ucuz fiyata, artık bir klavye uzağında!</p>
+            <button type="button" id="trialBuyButton">Ücretlerimizi Gör</button>
+
+        </div>
+
+        <div id="spam">
+
+            <p id="spamHeader">Spam yaptığınız tespit ettik.</p>
+            <p>Servisimizi bu şekilde istismar ederek kullanmaya devam ederseniz siteden kalıcı olarak yasaklanabilir, hesabınız kalıcı olarak kapatılabilir ve hakkınızda yasal işlem başlatılabilir.</p>
+            <p>Şu suçlardan sorumlu tutulabilirsiniz:</p>
+            <ul>
+
+                <li>İş ve Çalışma Hürriyetinin Engellenmesi Suçu, Türk Ceza Kanunu Madde 117/1</li>
+                
+                <li>Bilişim Sisteminin Engellemenmesi Suçu, Türk Ceza Kanunu madde 244 1. ve 2. fıkra</li>
+
+            </ul>
+            <p>Bu suçlardan dolayı toplamda 5 seneye kadar hapse mahkum edilme olasılığınız bulunmaktadır.</p>
+
+        </div>
+
+        <div id="characterLengthSpam">
+
+            <p id="characterLengthSpamHeader">Heeey! Biraz yavaşla bakalım.</p>
+            <p>Hukuk Asistanın da bir insa- eh yani robot. Ama yinede onla yavaş yavaş konuş lütfen. Demek istediklerini tane tane(yada paragraf paragraf bu durumda) anlat.</p>
+
+        </div>
+
+    </div>
+
+    <div id="sidebar">
+
+        <button id="closeBtn">X</button>
+        <p class="topsidebarP" id="name"></p>
+        <p class="topsidebarP" id="surname"></p>
+        <p class="topsidebarP" id="subscriptionType"></p>
+        <p class="topsidebarP" id="remainingDays"></p>
+
+        <button id="buyButton" type="button">Satın Al ve Kullanmaya Başla</button>
+
+        <button id="cancelButton" type="button" onclick="cancelSubscription()">Aboneliği İptal Et</button>
+
+        <button id="changePassword" type="button" onclick="changePassword()">Şifre Değiştir</button>
+
+        <p id="changesSaved"></p>
+
+        <div class="dropdown">
+            <p class="dropbtn" id="dropbtnID">Geçmiş Konuşmalar</p>
+            <div class="dropdown-content" id="dropdownContent">
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
