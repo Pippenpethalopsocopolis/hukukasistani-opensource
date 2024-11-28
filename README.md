@@ -26,3 +26,6 @@ IYZIPAY_SECRET_KEY=
 You will need to have api keys of these services of course. You can alter these if you want to use other services for email sending, sms sensding or your choosing of LLM apis.
 
 apijs folder contains backend codes which is backbone of this project. Main JavaScript file for this project is api.js. All backend code(routes, file serving, api logic etc) happens here.
+
+## Licence
+MIT
