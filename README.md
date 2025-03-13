@@ -1,31 +1,29 @@
-# What is Hukuk Asistanı?
+# 📜 Hukuk Asistanı – Your AI-Powered Legal Assistant  
 
-Hukuk Asistanı is a SaaS that provides it's users legal information.
+Hukuk Asistanı is a **SaaS platform** designed to provide **reliable and AI-enhanced legal information**.  
+Thanks to **advanced LLM technology**, it offers more **trustworthy, data-driven legal insights** than a traditional lawyer.  
 
-Thanks to advancements in the LLM, Hukuk Asistanı software can give people better, more trustable legal information than a regular lawyer because you can litteraly feed this AI with any data you have.
-You have tons of books about law that best of the lawyers used in their careers, feed it to AI and it will give every answer regular lawyer can provide.
+📚 **Feed the AI with any legal resources**—books, case law, legal codes—and get **precise, well-reasoned answers** just like a seasoned lawyer.  
 
-## How to use it?
+---
 
-In order to make this code work, use .env file, with these enviroment variables:
+## 🚀 Features  
 
-OPENAI_API_KEY=
+✅ **AI-Powered Legal Insights** – Get accurate legal information based on your data sources.  
+✅ **Customizable API** – Integrate with different LLMs, email, and SMS services.  
+✅ **Secure & Scalable** – Designed to handle large legal databases efficiently.  
 
-DB_PASSWORD=
+---
 
-MAILGUN_API_KEY=
+## 🛠 How to Set Up  
 
-TWILIO_ACCOUNT_SID=
+To run this project, create a `.env` file and add the required API keys:
 
-TWILIO_AUTH_TOKEN=
-
-IYZIPAY_API_KEY=
-
-IYZIPAY_SECRET_KEY=
-
-You will need to have api keys of these services of course. You can alter these if you want to use other services for email sending, sms sensding or your choosing of LLM apis.
-
-apijs folder contains backend codes which is backbone of this project. Main JavaScript file for this project is api.js. All backend code(routes, file serving, api logic etc) happens here.
-
-## Licence
-MIT
+```env
+OPENAI_API_KEY=your_openai_api_key
+DB_PASSWORD=your_database_password
+MAILGUN_API_KEY=your_mailgun_api_key
+TWILIO_ACCOUNT_SID=your_twilio_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+IYZIPAY_API_KEY=your_iyzipay_api_key
+IYZIPAY_SECRET_KEY=your_iyzipay_secret
