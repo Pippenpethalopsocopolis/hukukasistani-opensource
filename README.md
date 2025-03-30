@@ -27,3 +27,12 @@ TWILIO_ACCOUNT_SID=your_twilio_sid
 TWILIO_AUTH_TOKEN=your_twilio_auth_token
 IYZIPAY_API_KEY=your_iyzipay_api_key
 IYZIPAY_SECRET_KEY=your_iyzipay_secret
+```
+
+Be sure to set up your enivroment variables right or you are not going to access webapp's features fully.
+After setting up .env variables run the project with this command, node apijs/api.js and then open op your browser write 'localhost:portnumber'
+
+### Database
+Review database inserts and create a database for the project or it wont work properly.
+<br><br>
+![db](https://github.com/user-attachments/assets/4ac83f16-dfe5-4ec5-90b9-64a230e5f0e1)
