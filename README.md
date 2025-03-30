@@ -30,7 +30,7 @@ IYZIPAY_SECRET_KEY=your_iyzipay_secret
 ```
 
 Be sure to set up your enivroment variables right or you are not going to access webapp's features fully.
-After setting up .env variables run the project with this command, node apijs/api.js and then open op your browser write 'localhost:portnumber'
+After setting up .env variables run the project with this command, node apijs/api.js and then open up your browser write 'localhost:portnumber'
 
 ### Database
 Review database inserts and create a database for the project or it wont work properly.
